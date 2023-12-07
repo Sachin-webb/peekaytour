@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+             /* border: 1px solid red; */
+        }
+
+        body{
+            font-family: sans-serif;
+            /* background-image: url(https://motors.stylemixthemes.com/rent-a-car/wp-content/uploads/sites/7/2017/01/cars_bg.jpg?id=126);
+            height: 2000px; */
+        }
+
+        .topbar{
+            background-color: #23393D;
+        }
+
+        .innertopbar{
+            padding: 20px 0px;
+            width: 75%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .links{
+            width: 80%;
+            padding: 10px 0px;
+        }
+
+        .logo{
+            width: 10%;
+        }
+
+        .logo p{
+            font-size: 120%;
+            font-weight: bold;
+            color: white;
+            font-style: italic;
+        }
+
+        .logo p::first-letter{
+            font-size: 150%;
+            color: #f0c543;
+        }
+
+        .links a{
+            padding:0px 3%;
+            font-size: 90%;
+            text-decoration: none;
+            color: white;
+            transition: 0.6s;
+        }
+
+        .links a:hover{
+            color: #f0c543;
+            transform: scale(2);
+        }
+
+        .mainpic{          
+            background-color: #e5e5e5;
+            background-image: url("banner.jpg");
+            background-size:125%;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .innermaindiv{
+            width: 75%;
+            display: flex;
+            justify-content: flex-end;
+            margin: auto;  
+        }
+
+        .maildiv{
+            width: 350px;
+            padding: 30px;
+            box-shadow: 0px 11px 20px rgb(63, 63, 63);
+            background-color: #f0c543;
+        }
+
+        .maildiv form label{
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+    .maildiv form input{
+            margin: 10px 0px ;
+            font-size: 17px;
+            padding: 10px;
+            border: 0px;
+            width: 100%;
+        }   
+
+    .maildiv form button{
+            padding: 12px 25px;
+            border: 0px;
+            font-size: 15px;
+            cursor:pointer;
+            background-color: #23393D;
+            color: white;    
+        }   
+
+    .hd{
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            color: #273f44;
+          /* margin: 35px 0px 53px; */
+        } 
+
+    .mainnotes{
+            background-color: #eeeeee;
+            padding: 60px 0px;
+        } 
+
+    .notes{
+            display: flex;
+            flex-wrap: wrap;       
+            width: 75%;
+            margin: auto;
+            justify-content: space-around;      
+        }
+
+    .notes div{
+            width: 31%;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+    .notes div i{
+            padding: 15px; 
+            background-color: #f0c543;
+            color: white;
+            border-radius: 50%;
+            font-size: 180%;
+        }
+
+    .notes div div:first-child{
+            width: 55px;
+            display: block !important;
+        }
+
+    .notes div div:last-child{
+            width:280px;
+            display: block !important;
+        }
+
+    .notes h4{
+            color: #273f44;
+            font-size: 18px;
+            margin: 0px 0px 11px;
+        }
+
+    .notes p{
+            color: #5f5f5f;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+
+
+    .carimgdiv{
+            padding: 50px 0px;
+            background-image: url('cars_bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .carimgtext p{
+            font-size: 200%;
+            font-weight: bold;
+            color: white;
+
+        }
+
+        .carcard{
+            display: flex;
+            justify-content: space-between;
+            width: 73%;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+      
+        .car1{
+            display: flex;
+            flex-wrap: wrap;
+            width: 31%;
+            margin-top: 30px;
+            justify-content: space-between;
+            padding: 35px 30px;
+            transition: 0.3s;
+            background-color: white;
+           
+
+        }
+        .car2{
+            display: flex;
+            flex-wrap: wrap;
+            width: 31%;
+            margin-top: 30px;
+            justify-content: space-between;
+            padding: 35px 30px;
+            transition: 0.3s;
+            background-color: white;
+           
+
+        }
+        .car3{
+            display: flex;
+            flex-wrap: wrap;
+            width: 31%;
+            margin-top: 30px;
+            justify-content: space-between;
+            padding: 35px 30px;
+            transition: 0.3s;
+            background-color: white;
+           
+
+        }
+        .car4{
+            display: flex;
+            flex-wrap: wrap;
+            width: 31%;
+            margin-top: 30px;
+            justify-content: space-between;
+            padding: 35px 30px;
+            transition: 0.3s;
+            background-color: white;
+           
+
+        }
+        .car5{
+            display: flex;
+            flex-wrap: wrap;
+            width: 31%;
+            margin-top: 30px;
+            justify-content: space-between;
+            padding: 35px 30px;
+            transition: 0.3s;
+            background-color: white;
+           
+
+        }
+        .car6{
+            display: flex;
+            flex-wrap: wrap;
+            width: 31%;
+            margin-top: 30px;
+            justify-content: space-between;
+            padding: 35px 30px;
+            transition: 0.3s;
+            background-color: white;
+           
+
+        }
+        .cardtext1{
+            width: 64%;
+        }
+        .cardtext1 p:first-child::first-line{
+            font-size: 140%;
+            
+            
+        }
+        .cardtext1 p:first-child{
+            line-height: 27px;
+            font-weight: bold;
+        }
+        .cardtext1 p:last-child{
+            font-size: 95%;
+            color: white;
+            padding: 5px 12px;
+            line-height: 25px;
+            transition: 0.3s;
+            background-color: #f0c543;
+            
+        }
+        .cardtext1 p:last-child span{
+            font-size: 165%;
+            font-weight: bold;
+
+            
+        }
+        .cardtext2{
+            width: 80px ;
+        }
+        .cardtext2 p{
+            line-height: 30px;
+            font-size: 90%;
+            color: rgb(125, 125, 125);
+        }
+        .carimg1{
+            margin-top: 20px;
+            width: 100%;
+        }
+        .carimg1 img{
+            width: 100%;           
+        }
+        .car1:hover{
+            background-color: #f0c543;
+        }
+        .car1:hover .cardtext1 p:last-child{
+           background-color: #273f44;
+        }
+        .car2:hover{
+           background-color: #f0c543;
+        }
+        .car2:hover .cardtext1 p:last-child{
+           background-color: #273f44;
+        }
+        .car3:hover{
+           background-color: #f0c543;
+        }
+        .car3:hover .cardtext1 p:last-child{
+           background-color: #273f44;
+        }
+        .car4:hover{
+           background-color: #f0c543;
+        }
+        .car4:hover .cardtext1 p:last-child{
+           background-color: #273f44;
+        }
+        .car5:hover{
+           background-color: #f0c543;
+        }
+        .car5:hover .cardtext1 p:last-child{
+           background-color: #273f44;
+        }
+        .car6:hover{
+           background-color: #f0c543;
+        }
+        .car6:hover .cardtext1 p:last-child{
+           background-color: #273f44;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    .review{
+            padding: 50px 0px;
+            background-color: #eeeeee;
+        }
+
+    .review h2{
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            color: #273f44;     
+        }
+
+    .r1{
+            width: 75%;      
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: auto;
+        }
+
+    .r1 div{
+            border: 1px dotted rgb(166, 166, 166);
+            text-align: center;
+            width: 30%;
+            padding: 20px 20px 30px 20px;       
+        }
+
+    .r1 div img{
+            border-radius: 50px;
+        }
+
+    .r1 div p:first-child{
+            font-size: 22px;
+        }
+
+    .r1 div p:last-child{
+            color: #5f5f5f;
+            font-size: 14px;
+            line-height: 20px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+    .know{
+            background-color: #2a4045;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+    .knowtext{
+            padding: 100px 20px 0px 0px;
+            width: 570px;
+        }
+
+    .knowtext p:first-child{
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+    .knowtextpara{
+            color: white;
+            line-height: 25px;
+        }
+
+    .knowpic{
+            width: 740px;
+        }
+
+    .knowtext a{
+            text-decoration: none;
+            background-color: #f0c543;
+            color: #2a4045;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 15px 20px;
+            transition: 0.5s;
+        }
+
+    .knowtext a:hover{
+            background-color: hotpink;
+        }
+
+    .knowpic img{
+            width: 100%;
+        }
+
+    .feedback{
+            padding: 50px 0px;
+            background-color: #f0c543;
+        }
+
+    .feedback div{
+            display: flex;
+            width: 75%;
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+        }
+    
+    .feedback div p{
+            font-size: 25px;
+            font-weight: bold;
+            color: #273f44;
+        }
+
+    .feedback div a{
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid white;
+            color: #273f44;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+
+    .feedback div a:hover{
+            background-color: white;
+        }
+
+    .footer{
+            padding: 60px 0px 30px 0px;
+            background-color: #273f44;
+        }
+
+    .innerfooter{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 75%;
+            margin: auto;
+        }
+
+    .innerfooter div{
+            width: 30%;
+        }
+
+    .innerfooter div p span{
+            color: rgb(184, 184, 184);
+            font-weight: bold;
+        }
+
+    .innerfooter div p:first-child{
+            font-size: 90%;
+            color: white;
+        }
+
+    .innerfooter div p:last-child{
+            font-size: 87%;
+            color: white;
+        }
+
+    .innerfooter hr{
+            width: 100%;
+            margin: 40px 0px 30px 0px;
+            border: 0px;
+            height: 1px;
+            background-color: rgb(172, 172, 172);
+        }
+
+    .copy{
+            color: rgb(172, 172, 172);
+            font-size: 80%;
+        }
+        .hide{
+            display: none;
+        }
+
+        /* responsive */
+
+        @media screen and (max-width: 1243px) {
+            .cardtext1 p:last-child span{
+            font-size: 120%;
+            font-weight: bold;
+
+        }
+        .cardtext2{
+            width: 30% ;
+        }
+        .maildiv{
+            width: 35%;
+        }
+        .maildiv form label{
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .maildiv form button{
+            padding: 12px 25px;
+            border: 0px;
+            font-size: 12px;
+              
+        } 
+}
+
+
+@media screen and (max-width: 970px) {
+.innermaindiv{
+    width: 90%;
+}
+.hide{
+    display: block;
+}
+.links{
+    display: none;
+}
+.innertopbar{
+    justify-content: flex-start;
+    gap: 30%;
+}
+
+}
+@media screen and (max-width: 770px) {
+        
+ 
+
+}  
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="innertopbar">
+            <button class="btn btn-primary hide" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button
+              </button>
+         <div class="logo">
+            <p>PEEKAYTOUR</p>
+         </div> 
+         <div class="links">
+            <a href="index.html">HOME</a>
+            <a href="Service.html">SERVICE</a>
+            <a href="privacypolicy.html">TERMS</a>
+            <a href="aboutus.html">ABOUT US</a>
+            <a href="contactus.html">CONTACT US</a>
+         </div>  
+     </div>
+    </div>
+
+
+    
+      
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          </div>
+          <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div class="mainpic">
+        <div class="innermaindiv">
+            <div class="maildiv">
+                <form action="" onsubmit="sendemail(); reset(); return false;">
+                    <label for="">Enter Your Name</label><br>
+                    <input id="name" type="text"><br>
+                    <label for="">Enter Your Mobile Number</label><br>
+                    <input id="phone" type="number"><br>
+                    <label for="">Enter Your Mail Id</label><br>
+                    <input id="mail" type="mail"><br>
+                    <label for="">Message</label><br>
+                    <textarea name="" id="msg"></textarea><br><br>
+                    <button type="submit">Send Your Request</button>
+                </form>
+            </div>   
+        </div>
+    </div>
+
+    <div class="secdiv mainnotes">
+       <div class="hd">
+        <p><h2>WHY CHOOSE US</h2></p>
+       </div>
+
+      
+         <div class="notes">
+            <div>
+             <div><i class="fa-regular fa-thumbs-up"></i></div>
+              <div>  <h4>Outstanding Services</h4>
+                <p>We delivers outstanding services, blending efficiency and luxury. From prompt pickups to comfortable rides, our commitment to excellence ensures an unparalleled travel experience. Your journey, our priority.</p>
+            </div>
+            </div>
+            <div>
+                <div><i class="fa-solid fa-award"></i></div>
+               <div><h4>Name for Quality Vehicles</h4>
+                <p>PeekayTour: Driving Excellence. Our fleet comprises top-tier, quality vehicles tailored to elevate your travel. Experience the epitome of comfort, safety and style with every ride.</p>
+            </div>
+            </div> 
+            <div>
+                <div><i class="fa-solid fa-location-dot"></i></div>
+               <div> <h4>GPS on Every Vehicle</h4>
+                <p>At PeekayTour, precision meets convenience. With GPS on every vehicle, we navigate your journey seamlessly. Stay on course, track your route and enjoy a worry-free ride with us.</p>
+            </div>
+            </div>
+            <div>
+                <div><i class="fa-solid fa-baby-carriage"></i></div>
+                <div><h4>Baby Chairs/Booster Seats</h4>
+                <p>Our vehicles come equipped with baby chairs and booster seats, ensuring a secure and comfortable ride for your children. Travel with peace of mind, knowing we prioritize your family's well-being.</p>
+            </div>
+            </div>
+            <div>
+                <div><i class="fa-solid fa-key"></i></div>
+                <div><h4>AT/MT Transmission</h4>
+                <p>PeekayTour caters to your driving preferences with a choice between Automatic (AT) and Manual (MT) transmissions. Experience the freedom of effortless cruising—your journey, your style.</p>
+            </div>
+            </div>
+            <div>
+                <div><i class="fa-solid fa-headset"></i></div>
+                <div><h4>24 Hours Support</h4>
+                <p>We committed to your convenience around the clock. Our 24/7 support ensures assistance whenever you need it. From booking to on-road guidance, rely on us every hour of the day.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <div class="carimgdiv">
+            <div class="carimgtext"><br>
+               <center><p>VEHICLE CATEGORIES</p></center> 
+            </div><br><br>
+            <div class="carcard">
+              
+                <div class="car1">
+                    <div class="cardtext1">
+                        <p>Economy <br>
+                            Swift Dzire or Similar</p>
+                            <br>
+                            <p>FROM <br>
+                                <span>Rs.3,345/</span>DAY</p>
+                    </div>
+                    <div class="cardtext2">
+                        <p>
+                            <i class="fa-solid fa-couch"></i>  4 Seats <br>
+                            <i class="fa-solid fa-door-open"></i>  4 Doors <br>
+                            <i class="fa-regular fa-snowflake"></i>  A/C <br>
+                        </p>
+                    </div>
+                    <div class="carimg1">
+                        <img src="Swift Dzire.webp" alt="">
+                    </div>
+
+                </div>
+                <div class="car2">
+                    <div class="cardtext1">
+                        <p>Mini SUV <br>
+                            KUV 100 or Similar</p>
+                            <br>
+                            <p>FROM <br>
+                                <span>Rs.7,034/</span>DAY</p>
+                    </div>
+                    <div class="cardtext2">
+                        <p>
+                            <i class="fa-solid fa-couch"></i>  4 Seats <br>
+                            <i class="fa-solid fa-door-open"></i>  4 Doors <br>
+                            <i class="fa-regular fa-snowflake"></i>  A/C <br>
+                        </p>
+                    </div>
+                    <div class="carimg1">
+                        <img src="kuv100.webp" alt="">
+                    </div>
+
+                </div>
+                <div class="car3">
+                    <div class="cardtext1">
+                        <p>Luxury SUVs <br>
+                            Fortuner or Similar</p>
+                            <br>
+                            <p>FROM <br>
+                                <span>Rs.18,499/</span>DAY</p>
+                    </div>
+                    <div class="cardtext2">
+                        <p>
+                            <i class="fa-solid fa-couch"></i>  7 Seats <br>
+                            <i class="fa-solid fa-door-open"></i>  4 Doors <br>
+                            <i class="fa-regular fa-snowflake"></i>  A/C <br>
+                        </p>
+                    </div>
+                    <div class="carimg1">
+                        <img src="Fortuner.avif" alt="">
+                    </div>
+                </div>
+                <div class="car4">
+                    <div class="cardtext1">
+                        <p>Sedan <br>
+                            Hyundai Aura or Similar</p>
+                            <br>
+                            <p>FROM <br>
+                                <span>Rs.6,212/</span>DAY</p>
+                    </div>
+                    <div class="cardtext2">
+                        <p>
+                            <i class="fa-solid fa-couch"></i>  4 Seats <br>
+                            <i class="fa-solid fa-door-open"></i>  4 Doors <br>
+                            <i class="fa-regular fa-snowflake"></i>  A/C <br>
+                        </p>
+                    </div>
+                    <div class="carimg1">
+                        <img src="Aura.png" alt="">
+                    </div>
+                </div>
+                <div class="car5">
+                    <div class="cardtext1">
+                        <p>Luxury <br>
+                            Verna or Similar</p>
+                            <br>
+                            <p>FROM <br>
+                                <span>Rs.10,999/</span>DAY</p>
+                    </div>
+                    <div class="cardtext2">
+                        <p>
+                            <i class="fa-solid fa-couch"></i>  4 Seats <br>
+                            <i class="fa-solid fa-door-open"></i>  4 Doors <br>
+                            <i class="fa-regular fa-snowflake"></i>  A/C <br>
+                        </p>
+                    </div>
+                    <div class="carimg1">
+                        <img src="Verna.png" alt="">
+                    </div>
+                </div>
+                <div class="car6">
+                    <div class="cardtext1">
+                        <p>SUVs <br>
+                            Scorpio or Similar</p>
+                            <br>
+                            <p>FROM <br>
+                                <span>Rs.14,799/</span>DAY</p>
+                    </div>
+                    <div class="cardtext2">
+                        <p>
+                            <i class="fa-solid fa-couch"></i>  7 Seats <br>
+                            <i class="fa-solid fa-door-open"></i>  4 Doors <br>
+                            <i class="fa-regular fa-snowflake"></i>  A/C <br>
+                        </p>
+                    </div>
+                    <div class="carimg1">
+                        <img src="Scorpio.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    <div class="review">
+        <div class="h2">
+            <h2>WHAT OUR CLIENTS SAY</h2>
+        </div> <br><br><br>
+
+        <div class="r1">
+            <div>
+                <img src="img1.jpg" alt=""><br><br>
+                <p>Rohan</p><br>
+                <p>The fleet of vehicles provided by this taxi service is consistently clean and well-maintained. I appreciate the effort they put into ensuring a comfortable and enjoyable ride for passengers. The interiors are spotless, and the vehicles are equipped with modern amenities, making my journeys not only convenient but also pleasant.</p>
+            </div>
+            <div>
+                <img src="img3.jpg" alt=""><br><br>
+                <p>Jyoti</p><br>
+                <p>The drivers are a true asset to this taxi service. They are not only skilled and knowledgeable about the best routes, but they also exhibit a high level of professionalism and courtesy. I always feel safe and well taken care of during my rides, and the friendly demeanor of the drivers adds a positive touch to the overall experience.</p>
+            </div>
+            <div>
+                <img src="img2.jpg" alt=""><br><br>
+                <p>Amit</p><br>
+                <p>I have been using this taxi service for my daily commute, and I am extremely impressed with their reliability and punctuality. The drivers are always on time, and I never have to worry about being late for appointments. It's a relief to know that I can count on them to get me to my destination promptly.</p>
+            </div>
+        </div>
+    </div>
+    <div class="know">
+        <div class="knowtext">
+            <p>What Do You Know About Us</p><br><br>
+            <p class="knowtextpara">Welcome to PeekayTour, where seamless transportation meets unmatched reliability. As a leading taxi service, we redefine your travel experience with a commitment to punctuality, safety, and customer satisfaction. Our fleet boasts modern vehicles, driven by professional and courteous chauffeurs. Whether it's a swift airport transfer or a city excursion, PeekayTour ensures a journey that's not just about reaching your destination but enjoying the ride. Trust us to elevate your travel with our premium services and make every trip a memorable adventure.</p>
+        
+<br><br><a href="aboutus.html">OUR COMPANY</a>        
+</div>
+<div class="knowpic">
+    <img src="image-1.jpg" alt="">
+</div>
+    </div>
+    <div class="feedback">
+       <div>
+        <p>HAVE A QUESTIONS? FEEL FREE TO ASK...</p> 
+        <a href="contactus.html"><i class="fa-regular fa-envelope"></i> FEEDBACK</a>
+       </div>
+    </div>
+    <div class="footer">
+        <div class="innerfooter">
+            <div>
+                <p><span style="color: #f0c543;">ABOUT</span> CAR RENTAL</p> <br>
+                <p>Motors Automotive we repair domestic and foreign cars. We service the Los Angeles Metro Area for all Automotive Service & Repair.</p>
+            </div>
+            <div>
+                <p>CONTACT INFO</p><br>
+                <p><span>Car Rental Office:</span> +91 1135820554 <br>
+                   <span>Vehicle Repair service:</span> +918929063259 <br>
+                   <span> Email:</span> peekaytour@gmail.com</p>
+            </div>
+            <div>
+                <p>SERVICE HOURS</p> <br>
+                <p><span>Monday - Friday:</span> 09:00AM - 09:00PM <br>
+                   <span> Saturday:</span> 09:00AM - 07:00PM <br>
+                    <span>Sunday:</span> Closed</p>
+            </div> <hr>
+            <p class="copy">Copyright © 2023. <span style="color: #f0c543;">PeekayTour</span></p>
+        </div>
+    </div>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+     <script>
+
+        function sendemail(){
+        Email.send({
+          var: n = document.querySelector("#name").value,
+          var: m = document.querySelector("#mail").value,
+          var: num = document.querySelector("#phone").value,
+          var: numm = document.querySelector("#msg").value,
+
+          Host : "smtp.elasticemail.com",
+    Username : "rohitsb3630@gmail.com",
+    Password : "7F3FEA497A4E3932EA68C508F4ECE2C2F329",
+    To : 'rohitsb3630@gmail.com',
+    From : "rohitsb3630@gmail.com",
+    Subject : "Enquiry",
+          Body: "<br>Name:"+n+"<br>user mail: "+m+"<br>number:"+num+"<br> msg:"+numm
+        }).then(
+            message => alert("Thankyou")
+);
+}
+</script>
+</body>
+</html>
